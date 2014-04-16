@@ -173,6 +173,8 @@ xor esi,esi
 
 uCHECK: cmp byte ptr [eax+esi],75h	;check if char is 'u'
 je incU					;'u' found
+cmp byte ptr [eax+esi],55h		;check if char is 'U'
+je incU					;'U' found
 inc esi					;move to next char in paragraph
 loop UCHECK
 
